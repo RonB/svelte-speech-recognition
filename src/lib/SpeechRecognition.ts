@@ -4,7 +4,7 @@ import {
     compareTwoStringsUsingDiceCoefficient,
     browserSupportsPolyfills
 } from './utils'
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 import isAndroid from './isAndroid';
 import RecognitionManager from './RecognitionManager'
 import { derived, get, writable, type Writable } from 'svelte/store';
@@ -153,7 +153,7 @@ const useSpeechRecognition = ({
     const id = SpeechRecognition.counter
     SpeechRecognition.counter += 1
 
-    const callbacks = {
+    const callbacks:any = {
         onListeningChange: (newListening: boolean) => recognitionManager.listening.set(newListening),
         onMicrophoneAvailabilityChange: (newMicrophoneAvailability: boolean) => isMicrophoneAvailable = newMicrophoneAvailability,
         onTranscriptChange: handleTranscriptChange,
