@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { SpeechRecognitionType } from '$lib/SpeechRecognition';
-	import Button from './Button.svelte';
 
 	export let SpeechRecognition: SpeechRecognitionType;
 
@@ -10,8 +9,6 @@
 	};
 </script>
 
-<div on:click={stopListening}>
-	<slot>
-		<Button>stopListening</Button>
-	</slot>
-</div>
+<button class="border border-solid p-2 border-black rounded" on:click={stopListening}
+	>stopListening</button
+>

@@ -30,9 +30,9 @@
 			language="zh-CN"
 			buttonText="Listen Continuously (Chinese)"
 		/>
-		<div on:click={toggleShowFirstWidget}>
-			<Button>Toggle first widget</Button>
-		</div>
+		<button class="border border-solid p-2 border-black rounded" on:click={toggleShowFirstWidget}
+			>Toggle first widget</button
+		>
 		<Stop {SpeechRecognition}>
 			<button class="border border-solid p-2 border-black rounded">Stop</button>
 		</Stop>
