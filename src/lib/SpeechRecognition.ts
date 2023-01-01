@@ -10,7 +10,7 @@ import RecognitionManager from './RecognitionManager'
 import { derived, get, writable, type Writable } from 'svelte/store';
 import { NativeSpeechRecognition } from './NativeSpeechRecognition'
 import type { SpeechRecognitionClass, SpeechRecognition as PolyfillSpeechRecognitionType } from '@speechly/speech-recognition-polyfill';
-
+import type { Command } from '$lib/types';
 
 let _browserSupportsSpeechRecognition = !!NativeSpeechRecognition
 let _browserSupportsContinuousListening = _browserSupportsSpeechRecognition && !isAndroid()
